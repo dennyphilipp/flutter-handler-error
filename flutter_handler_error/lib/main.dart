@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 
+import 'errorPage.dart';
+
 void main() {
+  FlutterError.onError = (FlutterErrorDetails details) {
+    FlutterError.presentError(details);
+
+    runApp(ErrorPage());
+  };
+
   runApp(const MyApp());
 }
 
@@ -31,7 +39,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Flutter Demo Handler Error'),
     );
   }
 }
@@ -105,6 +113,14 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            ElevatedButton(
+              onPressed: () => {throw Exception()},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue,
+                foregroundColor: Colors.white,
+              ),
+              child: const Text('Force exception error page'),
+            ),
             const Text(
               'You have pushed the button this many times:',
             ),
