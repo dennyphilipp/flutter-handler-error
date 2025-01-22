@@ -20,7 +20,6 @@ This project demonstrates how to implement global error handling in a Flutter ap
 
    ```bash
    git clone https://github.com/dennyphilipp/flutter-handler-error
-   cd flutter-global-error-handler
 
 2. Install dependencies
     ```bash
