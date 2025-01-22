@@ -1,16 +1,32 @@
-# flutter_handler_error
+# Global Error Handling in Flutter
 
-A new Flutter project.
+This project demonstrates how to implement global error handling in a Flutter application, replacing the default gray screen shown in release mode with a custom error screen.
 
-## Getting Started
+## 🚀 Features
 
-This project is a starting point for a Flutter application.
+- Captures global errors using `FlutterError.onError`.
+- Redirects users to a custom error screen when an error occurs.
+- Displays user-friendly messages to improve the overall experience.
 
-A few resources to get you started if this is your first Flutter project:
+## 📂 Project Structure
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **`main.dart`**: Sets up global error handling and defines the main application logic.
+- **`MyHomePage`**: The home page containing a button that simulates an error.
+- **`ErrorPage`**: A custom screen displayed when an error occurs.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## ▶️ How to Run the Project
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/dennyphilipp/flutter-handler-error
+   cd flutter-global-error-handler
+   
+2. Install dependencies
+    ```bash
+   flutter pub get
+   
+3. Run the application
+    ```bash
+   flutter run
+
